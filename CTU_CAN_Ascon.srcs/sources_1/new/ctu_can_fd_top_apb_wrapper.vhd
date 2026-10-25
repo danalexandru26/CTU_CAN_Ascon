@@ -49,7 +49,66 @@ entity ctu_can_fd_top_apb_wrapper is
 end entity ctu_can_fd_top_apb_wrapper;
 
 architecture rtl of ctu_can_fd_top_apb_wrapper is
+    -- Attribure definiton for interface mapping
+
+    attribute X_INTERFACE_INFO      : string;
+    attribute X_INTERFACE_PARAMETER : string;
+ 
+    attribute X_INTERFACE_INFO      of aclk : signal is "xilinx.com:signal:clock:1.0 aclk CLK";
+    attribute X_INTERFACE_PARAMETER of aclk : signal is "ASSOCIATED_BUSIF s_apb, ASSOCIATED_RESET arstn";
+ 
+    attribute X_INTERFACE_INFO      of arstn : signal is "xilinx.com:signal:reset:1.0 arstn RST";
+    attribute X_INTERFACE_PARAMETER of arstn : signal is "POLARITY ACTIVE_LOW";
+ 
+    attribute X_INTERFACE_INFO      of irq : signal is "xilinx.com:signal:interrupt:1.0 irq INTERRUPT";
+    attribute X_INTERFACE_PARAMETER of irq : signal is "SENSITIVITY LEVEL_HIGH";
+ 
+    attribute X_INTERFACE_INFO of s_apb_paddr   : signal is "xilinx.com:interface:apb:1.0 s_apb PADDR";
+    attribute X_INTERFACE_INFO of s_apb_penable : signal is "xilinx.com:interface:apb:1.0 s_apb PENABLE";
+    attribute X_INTERFACE_INFO of s_apb_pprot   : signal is "xilinx.com:interface:apb:1.0 s_apb PPROT";
+    attribute X_INTERFACE_INFO of s_apb_prdata  : signal is "xilinx.com:interface:apb:1.0 s_apb PRDATA";
+    attribute X_INTERFACE_INFO of s_apb_pready  : signal is "xilinx.com:interface:apb:1.0 s_apb PREADY";
+    attribute X_INTERFACE_INFO of s_apb_psel    : signal is "xilinx.com:interface:apb:1.0 s_apb PSEL";
+    attribute X_INTERFACE_INFO of s_apb_pslverr : signal is "xilinx.com:interface:apb:1.0 s_apb PSLVERR";
+    attribute X_INTERFACE_INFO of s_apb_pstrb   : signal is "xilinx.com:interface:apb:1.0 s_apb PSTRB";
+    attribute X_INTERFACE_INFO of s_apb_pwdata  : signal is "xilinx.com:interface:apb:1.0 s_apb PWDATA";
+    attribute X_INTERFACE_INFO of s_apb_pwrite  : signal is "xilinx.com:interface:apb:1.0 s_apb PWRITE";
+
     begin
-    
-end architecture;
+        -- CTU CAN FD APB wrapper
+        i_can : entity ctu_can_fd_rtl.ctu_can_fd_top_apb
+        generic map(
+            G_RX_BUF_SIZE     => G_RX_BUF_SIZE,
+            G_TXT_BUF_COUNT   => G_TXT_BUF_COUNT,
+            G_FILT_A_EN       => G_FILT_A_EN,
+            G_FILT_B_EN       => G_FILT_B_EN,
+            G_FILT_C_EN       => G_FILT_C_EN,
+            G_FILT_RANGE_EN   => G_FILT_RANGE_EN,
+            G_TEST_REGS_EN    => G_TEST_REGS_EN,
+            G_TRAFFIC_CTRS_EN => G_TRAFFIC_CTRS_EN,
+            G_PARITY_EN       => G_PARITY_EN,
+            G_ACTIVE_TS_BITS  => G_ACTIVE_TS_BITS,
+            G_RESET_BUF_RAMS  => G_RESET_BUF_RAMS
+        )
+        port map(
+            aclk          => aclk,
+            arstn         => arstn,
+            scan_mode     => scan_mode,
+            rst_n_out     => rst_n_out,
+            irq           => irq,
+            can_tx        => can_tx,
+            can_rx        => can_rx,
+            timestamp     => timestamp,
+            s_apb_paddr   => s_apb_paddr,
+            s_apb_penable => s_apb_penable,
+            s_apb_pprot   => s_apb_pprot,
+            s_apb_prdata  => s_apb_prdata,
+            s_apb_pready  => s_apb_pready,
+            s_apb_psel    => s_apb_psel,
+            s_apb_pslverr => s_apb_pslverr,
+            s_apb_pstrb   => s_apb_pstrb,
+            s_apb_pwdata  => s_apb_pwdata,
+            s_apb_pwrite  => s_apb_pwrite
+        );
+end architecture rtl;
    

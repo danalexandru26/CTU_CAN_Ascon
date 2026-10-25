@@ -70,7 +70,7 @@
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
     <Option Name="WTXSimExportSim" Val="0"/>
     <Option Name="WTModelSimExportSim" Val="0"/>
-    <Option Name="WTQuestaExportSim" Val="3"/>
+    <Option Name="WTQuestaExportSim" Val="1"/>
     <Option Name="WTIesExportSim" Val="0"/>
     <Option Name="WTVcsExportSim" Val="0"/>
     <Option Name="WTRivieraExportSim" Val="0"/>
