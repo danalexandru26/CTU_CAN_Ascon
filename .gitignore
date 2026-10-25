@@ -1,0 +1,72 @@
+# ---------------------------------------------------------------
+# Vivado + block design project .gitignore
+# Keep: CTU_CAN_Ascon.xpr, project.sigasi, your own RTL/testbenches/
+#       constraints in CTU_CAN_Ascon.srcs/, the block design (.bd, .bda,
+#       ui/*.ui), the IP configs (*.xci) and any .tcl scripts you write.
+# Ignore: everything Vivado/xsim/Sigasi regenerates.
+# ---------------------------------------------------------------
+
+# Vivado generated project folders
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.runs/
+*.gen/
+*.Xil/
+.Xil/
+*.hbs/
+
+# Block design: keep the .bd and each IP's .xci, ignore the products
+# Vivado generates next to them ("Generate Output Products")
+*.srcs/sources_1/bd/*/ip/*/*
+!*.srcs/sources_1/bd/*/ip/*/*.xci
+*.srcs/sources_1/bd/*/hdl/
+*.srcs/sources_1/bd/*/sim/
+*.srcs/sources_1/bd/*/synth/
+*.srcs/sources_1/bd/*/ipshared/
+*.srcs/sources_1/bd/*/*.bxml
+*.srcs/sources_1/bd/*/*_ooc.xdc
+*.srcs/sources_1/bd/*/*.hwh
+*.srcs/sources_1/bd/*/hw_handoff/
+
+# Standalone IP (outside a block design): keep only the .xci
+*.srcs/sources_1/ip/*/*
+!*.srcs/sources_1/ip/*/*.xci
+
+# Hardware export for Vitis / PetaLinux (regenerate with write_hw_platform)
+*.xsa
+
+# Command-line simulation output folder
+sim/
+
+# xsim (simulator) output
+xsim.dir/
+*.wdb
+*.pb
+webtalk*
+*.jou
+*.log
+*.str
+*.backup.*
+
+# Vivado misc
+vivado*.jou
+vivado*.log
+vivado_pid*.str
+usage_statistics_webtalk.*
+dfx_runtime.txt
+*.dcp
+*.bit
+*.ltx
+*.bin
+
+# Sigasi generated files (project.sigasi itself is kept)
+.sigasi/generated/
+
+# Editor / OS junk
+.vscode/
+*.swp
+*~
+Thumbs.db
+desktop.ini

@@ -1,0 +1,16 @@
+{
+    "name": "CTU_CAN_Ascon",
+    "targets": {
+        "vivado": {
+            "interpreter": "tcl",
+            "command": [
+                "import_vivado -vivado {c:/AMDDesignTools/2025.2.1/Vivado} {CTU_CAN_Ascon.xpr}"
+            ],
+            // TODO: Add a Vivado library dependency to make Xilinx libraries available, e.g.,
+            // "dependencies": [{"Vivado": [
+            //     Add your libraries here
+            // ]}],
+            "autoRefresh": true
+        }
+    }
+}
