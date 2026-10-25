@@ -6,7 +6,7 @@
       "gen_directory": "../../../../CTU_CAN_Ascon.gen/sources_1/bd/CAN_System",
       "name": "CAN_System",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
-      "synth_flow_mode": "Hierarchical",
+      "synth_flow_mode": "None",
       "tool_version": "2025.2.1",
       "validated": "true"
     },
@@ -17,7 +17,7 @@
       "smartconnect_0": "",
       "xlconstant_0": "",
       "xlconstant_1": "",
-      "ctu_can_fd_top_apb_0": ""
+      "ctu_can_fd_top_apb_w_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -2078,23 +2078,90 @@
           }
         }
       },
-      "ctu_can_fd_top_apb_0": {
-        "vlnv": "xilinx.com:module_ref:ctu_can_fd_top_apb:1.0",
+      "ctu_can_fd_top_apb_w_0": {
+        "vlnv": "xilinx.com:module_ref:ctu_can_fd_top_apb_wrapper:1.0",
         "ip_revision": "1",
-        "xci_name": "CAN_System_ctu_can_fd_top_apb_0_0",
-        "xci_path": "ip\\CAN_System_ctu_can_fd_top_apb_0_0\\CAN_System_ctu_can_fd_top_apb_0_0.xci",
-        "inst_hier_path": "ctu_can_fd_top_apb_0",
+        "xci_name": "CAN_System_ctu_can_fd_top_apb_w_0_0",
+        "xci_path": "ip\\CAN_System_ctu_can_fd_top_apb_w_0_0\\CAN_System_ctu_can_fd_top_apb_w_0_0.xci",
+        "inst_hier_path": "ctu_can_fd_top_apb_w_0",
         "has_run_ip_tcl": "true",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "ctu_can_fd_top_apb",
+          "ref_name": "ctu_can_fd_top_apb_wrapper",
           "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "s_apb": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:apb:1.0",
+            "vlnv": "xilinx.com:interface:apb_rtl:1.0",
+            "port_maps": {
+              "PADDR": {
+                "physical_name": "s_apb_paddr",
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "PPROT": {
+                "physical_name": "s_apb_pprot",
+                "direction": "I",
+                "left": "2",
+                "right": "0"
+              },
+              "PSEL": {
+                "physical_name": "s_apb_psel",
+                "direction": "I"
+              },
+              "PENABLE": {
+                "physical_name": "s_apb_penable",
+                "direction": "I"
+              },
+              "PWRITE": {
+                "physical_name": "s_apb_pwrite",
+                "direction": "I"
+              },
+              "PWDATA": {
+                "physical_name": "s_apb_pwdata",
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "PSTRB": {
+                "physical_name": "s_apb_pstrb",
+                "direction": "I",
+                "left": "3",
+                "right": "0"
+              },
+              "PREADY": {
+                "physical_name": "s_apb_pready",
+                "direction": "O"
+              },
+              "PRDATA": {
+                "physical_name": "s_apb_prdata",
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "PSLVERR": {
+                "physical_name": "s_apb_pslverr",
+                "direction": "O"
+              }
+            }
+          }
         },
         "ports": {
           "aclk": {
             "type": "clk",
             "direction": "I",
             "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "arstn",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_BUSIF": {
+                "value": "s_apb",
+                "value_src": "constant"
+              },
               "FREQ_HZ": {
                 "value": "100000000",
                 "value_src": "user_prop"
@@ -2106,11 +2173,12 @@
             }
           },
           "arstn": {
+            "type": "rst",
             "direction": "I",
             "parameters": {
               "POLARITY": {
                 "value": "ACTIVE_LOW",
-                "value_src": "const_prop"
+                "value_src": "constant"
               }
             }
           },
@@ -2140,51 +2208,17 @@
             "direction": "I",
             "left": "63",
             "right": "0"
-          },
-          "s_apb_paddr": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "s_apb_penable": {
-            "direction": "I"
-          },
-          "s_apb_pprot": {
-            "direction": "I",
-            "left": "2",
-            "right": "0"
-          },
-          "s_apb_prdata": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "s_apb_pready": {
-            "direction": "O"
-          },
-          "s_apb_psel": {
-            "direction": "I"
-          },
-          "s_apb_pslverr": {
-            "direction": "O"
-          },
-          "s_apb_pstrb": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "s_apb_pwdata": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "s_apb_pwrite": {
-            "direction": "I"
           }
         }
       }
     },
     "interface_nets": {
+      "axi_apb_bridge_0_APB_M": {
+        "interface_ports": [
+          "axi_apb_bridge_0/APB_M",
+          "ctu_can_fd_top_apb_w_0/s_apb"
+        ]
+      },
       "processing_system7_0_DDR": {
         "interface_ports": [
           "DDR",
@@ -2211,6 +2245,18 @@
       }
     },
     "nets": {
+      "ctu_can_fd_top_apb_w_0_can_tx": {
+        "ports": [
+          "ctu_can_fd_top_apb_w_0/can_tx",
+          "ctu_can_fd_top_apb_w_0/can_rx"
+        ]
+      },
+      "ctu_can_fd_top_apb_w_0_irq": {
+        "ports": [
+          "ctu_can_fd_top_apb_w_0/irq",
+          "processing_system7_0/IRQ_F2P"
+        ]
+      },
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
@@ -2218,7 +2264,7 @@
           "processing_system7_0/M_AXI_GP0_ACLK",
           "axi_apb_bridge_0/s_axi_aclk",
           "rst_ps7_0_100M/slowest_sync_clk",
-          "ctu_can_fd_top_apb_0/aclk"
+          "ctu_can_fd_top_apb_w_0/aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -2237,8 +2283,35 @@
         "ports": [
           "rst_ps7_0_100M/peripheral_aresetn",
           "axi_apb_bridge_0/s_axi_aresetn",
-          "ctu_can_fd_top_apb_0/arstn"
+          "ctu_can_fd_top_apb_w_0/arstn"
         ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "ctu_can_fd_top_apb_w_0/scan_mode"
+        ]
+      },
+      "xlconstant_1_dout": {
+        "ports": [
+          "xlconstant_1/dout",
+          "ctu_can_fd_top_apb_w_0/timestamp"
+        ]
+      }
+    },
+    "addressing": {
+      "/processing_system7_0": {
+        "address_spaces": {
+          "Data": {
+            "segments": {
+              "SEG_ctu_can_fd_top_apb_w_0_Reg": {
+                "address_block": "/ctu_can_fd_top_apb_w_0/s_apb/Reg",
+                "offset": "0x43C00000",
+                "range": "64K"
+              }
+            }
+          }
+        }
       }
     }
   }

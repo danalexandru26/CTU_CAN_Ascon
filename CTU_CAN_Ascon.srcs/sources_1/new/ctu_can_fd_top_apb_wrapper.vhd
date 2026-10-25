@@ -1,8 +1,5 @@
 -- Block-design wrapper for CTU CAN FD (APB4).
 -- Adds Xilinx interface attributes so Vivado infers s_apb as one APB
--- interface (with an address segment), plus clock/reset/irq metadata.
--- Add this file to library xil_defaultlib (default), NOT ctu_can_fd_rtl,
--- then "Add Module" -> ctu_can_fd_bd.
 
 library ieee;
 use ieee.std_logic_1164.all;
