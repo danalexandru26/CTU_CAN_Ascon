@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="71" Path="d:/FPGA_Dev/Digilent/Zynq-7020/RTL/CTU_CAN_Ascon/CTU_CAN_Ascon.xpr">
+<Project Product="Vivado" Version="7" Minor="71" Path="D:/FPGA_Dev/Digilent/Zynq-7020/RTL/CTU_CAN_Ascon/CTU_CAN_Ascon.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="000a57cab55a47eba77607f5c5536392"/>
@@ -68,13 +68,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="2"/>
-    <Option Name="WTModelSimExportSim" Val="2"/>
-    <Option Name="WTQuestaExportSim" Val="33"/>
+    <Option Name="WTXSimExportSim" Val="3"/>
+    <Option Name="WTModelSimExportSim" Val="3"/>
+    <Option Name="WTQuestaExportSim" Val="72"/>
     <Option Name="WTIesExportSim" Val="0"/>
     <Option Name="WTVcsExportSim" Val="0"/>
-    <Option Name="WTRivieraExportSim" Val="2"/>
-    <Option Name="WTActivehdlExportSim" Val="2"/>
+    <Option Name="WTRivieraExportSim" Val="3"/>
+    <Option Name="WTActivehdlExportSim" Val="3"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>

@@ -1298,7 +1298,7 @@
             "value": "200"
           },
           "PCW_PERIPHERAL_BOARD_PRESET": {
-            "value": "None"
+            "value": "part0"
           },
           "PCW_PLL_BYPASSMODE_ENABLE": {
             "value": "0"
@@ -2164,7 +2164,7 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "1e+08",
                 "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
@@ -2221,7 +2221,7 @@
         "has_run_ip_tcl": "true",
         "parameters": {
           "C_DATA_DEPTH": {
-            "value": "32768"
+            "value": "131072"
           },
           "C_MONITOR_TYPE": {
             "value": "Native"

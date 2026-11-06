@@ -2055,7 +2055,7 @@
         "C_PROBE2_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_PROBE1_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_PROBE0_WIDTH": [ { "value": "1", "value_src": "propagated", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "C_DATA_DEPTH": [ { "value": "32768", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_DATA_DEPTH": [ { "value": "131072", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_NUM_OF_PROBES": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_XLNX_HW_PROBE_INFO": [ { "value": "DEFAULT", "resolve_type": "user", "usage": "all" } ],
         "Component_Name": [ { "value": "CAN_System_ila_0_0", "resolve_type": "user", "usage": "all" } ],
@@ -3136,7 +3136,7 @@
         "C_NUM_MONITOR_SLOTS": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_ENABLE_ILA_AXI_MON": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_NUM_OF_PROBES": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_DATA_DEPTH": [ { "value": "32768", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_DATA_DEPTH": [ { "value": "131072", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_MAJOR_VERSION": [ { "value": "2025", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_MINOR_VERSION": [ { "value": "2", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_BUILD_REVISION": [ { "value": "0", "format": "long", "usage": "all" } ],
@@ -6281,7 +6281,7 @@
           "mode": "slave",
           "parameters": {
             "ASSOCIATED_BUSIF": [ { "value": "SLOT_0_AXI:SLOT_0_AXIS", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
-            "FREQ_HZ": [ { "value": "100000000", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
+            "FREQ_HZ": [ { "value": "1e+08", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
             "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
             "CLK_DOMAIN": [ { "value": "CAN_System_processing_system7_0_0_FCLK_CLK0", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
@@ -6296,5 +6296,5 @@
       }
     }
   },
-  "checksum": "11578c9a"
+  "checksum": "11faa57a"
 }
