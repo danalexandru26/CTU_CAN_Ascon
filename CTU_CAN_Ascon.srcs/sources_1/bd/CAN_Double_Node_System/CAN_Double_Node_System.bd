@@ -2543,8 +2543,8 @@
       "CAN_LOGIC_AND_BUS_Res": {
         "ports": [
           "CAN_LOGIC_AND_BUS/Res",
-          "ctu_can_fd_top_apb_w_1/can_rx",
-          "ctu_can_fd_top_apb_w_0/can_rx"
+          "ctu_can_fd_top_apb_w_0/can_rx",
+          "ctu_can_fd_top_apb_w_1/can_rx"
         ]
       },
       "ctu_can_fd_top_apb_w_0_can_tx": {
@@ -2574,10 +2574,10 @@
           "processing_system7_0/M_AXI_GP0_ACLK",
           "axi_apb_bridge_0/s_axi_aclk",
           "rst_ps7_0_100M/slowest_sync_clk",
-          "ctu_can_fd_top_apb_w_0/aclk",
           "ila_tx_network/clk",
-          "ctu_can_fd_top_apb_w_1/aclk",
-          "axi_apb_bridge_1/s_axi_aclk"
+          "axi_apb_bridge_1/s_axi_aclk",
+          "ctu_can_fd_top_apb_w_0/aclk",
+          "ctu_can_fd_top_apb_w_1/aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -2596,9 +2596,9 @@
         "ports": [
           "rst_ps7_0_100M/peripheral_aresetn",
           "axi_apb_bridge_0/s_axi_aresetn",
+          "axi_apb_bridge_1/s_axi_aresetn",
           "ctu_can_fd_top_apb_w_0/arstn",
-          "ctu_can_fd_top_apb_w_1/arstn",
-          "axi_apb_bridge_1/s_axi_aresetn"
+          "ctu_can_fd_top_apb_w_1/arstn"
         ]
       },
       "xlconstant_0_dout": {

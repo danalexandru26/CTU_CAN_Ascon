@@ -9,7 +9,7 @@ library ctu_can_fd_rtl;
 entity ctu_can_fd_top_apb_wrapper is
     generic(
         G_RX_BUF_SIZE     : natural range 32 to 4096 := 128;
-        G_TXT_BUF_COUNT   : natural range 2 to 8     := 4;
+        G_TXT_BUF_COUNT   : natural range 2 to 8     := 2;
         G_FILT_A_EN       : boolean                  := false;
         G_FILT_B_EN       : boolean                  := false;
         G_FILT_C_EN       : boolean                  := false;
