@@ -140,24 +140,15 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/CAN_Double_Node_System/CAN_Double_Node_System.bd">
+      <File Path="$PSRCDIR/sources_1/bd/CAN_System/CAN_System.bd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="CAN_Double_Node_System.bd" FileRelPathName="ip\CAN_Double_Node_System_ctu_can_fd_top_apb_w_0_0\CAN_Double_Node_System_ctu_can_fd_top_apb_w_0_0.xci">
-          <Proxy FileSetName="CAN_Double_Node_System_ctu_can_fd_top_apb_w_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="CAN_Double_Node_System.bd" FileRelPathName="ip\CAN_Double_Node_System_ctu_can_fd_top_apb_w_0_1\CAN_Double_Node_System_ctu_can_fd_top_apb_w_0_1.xci">
-          <Proxy FileSetName="CAN_Double_Node_System_ctu_can_fd_top_apb_w_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="CAN_Double_Node_System.bd" FileRelPathName="ip\CAN_Double_Node_System_processing_system7_0_0\CAN_Double_Node_System_processing_system7_0_0.xci">
-          <Proxy FileSetName="CAN_Double_Node_System_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
       </File>
-      <File Path="$PGENDIR/sources_1/bd/CAN_Double_Node_System/hdl/CAN_Double_Node_System_wrapper.v">
+      <File Path="$PGENDIR/sources_1/bd/CAN_System/hdl/CAN_System_wrapper.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -752,14 +743,23 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/CAN_System/CAN_System.bd">
+      <File Path="$PSRCDIR/sources_1/bd/CAN_Double_Node_System/CAN_Double_Node_System.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="CAN_Double_Node_System.bd" FileRelPathName="ip\CAN_Double_Node_System_ctu_can_fd_top_apb_w_0_0\CAN_Double_Node_System_ctu_can_fd_top_apb_w_0_0.xci">
+          <Proxy FileSetName="CAN_Double_Node_System_ctu_can_fd_top_apb_w_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="CAN_Double_Node_System.bd" FileRelPathName="ip\CAN_Double_Node_System_ctu_can_fd_top_apb_w_0_1\CAN_Double_Node_System_ctu_can_fd_top_apb_w_0_1.xci">
+          <Proxy FileSetName="CAN_Double_Node_System_ctu_can_fd_top_apb_w_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="CAN_Double_Node_System.bd" FileRelPathName="ip\CAN_Double_Node_System_processing_system7_0_0\CAN_Double_Node_System_processing_system7_0_0.xci">
+          <Proxy FileSetName="CAN_Double_Node_System_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
       </File>
-      <File Path="$PGENDIR/sources_1/bd/CAN_System/hdl/CAN_System_wrapper.v">
+      <File Path="$PGENDIR/sources_1/bd/CAN_Double_Node_System/hdl/CAN_Double_Node_System_wrapper.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -768,7 +768,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="CAN_System_wrapper"/>
+        <Option Name="TopModule" Val="CAN_Double_Node_System_wrapper"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
